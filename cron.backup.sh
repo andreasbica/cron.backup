@@ -13,7 +13,7 @@ if [ "$disk1" == "" ] || [ "$disk2" == "" ]; then
 
 else
     echo "determine I/O load ..." >> $logf
-    echo "I/O allowed max. load to process backup = 3.5" >> $logf
+    echo "I/O allowed max. load to process backup = 2.5" >> $logf
     
     detectedLoad=$(echo "$(top -bn2 | grep -o -E "[[:digit:]]*\.[[:digit:]] wa" | tr -d ' wa' | tail -1)");
     
@@ -23,7 +23,7 @@ else
 
     load=$(awk '{print $1*$2}' <<< "$detectedLoad 100");
 
-    if [ $load -gt 350 ]; then
+    if [ $load -gt 250 ]; then
         echo "rsync skipped. I/O to busy."
         echo "rsync skipped. I/O to busy." >> $logf
 

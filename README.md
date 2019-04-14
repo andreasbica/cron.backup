@@ -21,8 +21,12 @@ reboot
 
 Add this line
 
-`*/30 * * * * sudo bash /root/cron.backup/cron.backup.sh`
+`2 */1 * * * sudo bash /root/cron.backup/cron.backup.sh`
 
 ## see the log
 
 `less /var/log/cron-backup.log`
+
+or
+
+`tail -f /var/log/cron-backup.log`
