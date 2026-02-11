@@ -41,7 +41,7 @@ if [ "$runSetup" != "y" ]; then
 fi
 
 fstabf="/etc/fstab";
-dlf="/root/cron.backup.disklist";
+dlf="/root/cron.backup/disklist.ini";
 
 echo "disk1=\"$disk1\";" > $dlf;
 echo "disk2=\"$disk2\";" >> $dlf;

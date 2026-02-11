@@ -11,7 +11,7 @@ chmod 700 cron.backup -R
 ```
 
 ```
-bash cron.backup/make-setup.sh
+bash cron.backup/make-setup-*.sh
 reboot
 ```
 
@@ -21,7 +21,7 @@ reboot
 
 Add this line
 
-`2 */1 * * * sudo bash /root/cron.backup/cron.backup.sh`
+`2 */1 * * * sudo bash /root/cron.backup/cron.backup-*.sh`
 
 ## see the log
 
